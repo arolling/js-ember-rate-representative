@@ -3,17 +3,17 @@
   <form class="col s12">
     <div class="row">
       <div class="input-field col s6">
-        {{input placeholder="Username" id="usernameNew" type="text" class="validate" value=usernameNew}}
+        {{md-input placeholder="Username" id="usernameNew" type="text" validate=true value=usernameNew}}
         <label for="usernameNew">User Name</label>
       </div>
       <div class="input-field col s6">
-        {{input id="zipcodeNew" type="number" class="validate" placeholder="90210" value=zipcodeNew length="5"}}
+        {{md-input id="zipcodeNew" type="number" validate=true placeholder="90210" value=zipcodeNew length="5"}}
         <label for="zipcodeNew">Zip Code</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        {{input id="addressNew" type="text" class="validate" placeholder="123 Main St, New York, NY" value=addressNew}}
+        {{md-input id="addressNew" type="text" validate=true placeholder="123 Main St, New York, NY" value=addressNew}}
         <label for="addressNew">Address</label>
       </div>
     </div>
