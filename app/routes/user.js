@@ -16,9 +16,10 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    submitQuery(){
-      var zipcode = this.get('queryZipCode');
-      this.transitionTo('search', zipcode);
+    submitQuery(params){
+
+      console.log(params);
+      this.transitionTo('search', params.zipcode);
     }
   }
 });
