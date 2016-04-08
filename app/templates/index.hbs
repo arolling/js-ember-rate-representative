@@ -7,7 +7,7 @@
 
   <div class="col s9">
     <div class="row">
-      <div class="col s8">
+      <div class="col s7">
         <h4>View a Legislator</h4>
         <ul class="collection">
           {{#each model.allLegislators as |lawmaker|}}
@@ -15,8 +15,8 @@
           {{/each}}
         </ul>
       </div>
-      <div class="col s4">
-        {{current-user-tile}}
+      <div class="col s5">
+        {{current-user-tile logMeOut="logMeOut"}}
       </div>
     </div>
   </div>

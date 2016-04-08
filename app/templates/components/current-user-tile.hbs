@@ -1,7 +1,13 @@
-<div class="row">
-  <div class="col s12 m5">
-    <div class="card-panel teal">
-      <span class="white-text">Welcome, {{currentUser.user.username}}</span>
+
+    <div class="card teal">
+      <div class="card-content white-text">
+        <span class="card-title">Welcome, {{currentUser.user.username}}</span>
+        <p>
+          Please keep the conversation civil.
+        </p>
+      </div>
+      <div class="card-action">
+        <a class="waves-effect waves-teal btn-flat" {{action "logMeOut"}}>Log Out</a>
+        {{#link-to 'user' class="waves-effect waves-teal btn-flat"}}Profile{{/link-to}}
+      </div>
     </div>
-  </div>
-</div>
