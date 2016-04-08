@@ -1,15 +1,18 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="/" class="brand-logo"> <img src="assets/images/congress.png" alt="Logo" /> </a>
       <ul class="right hide-on-med-and-down">
         <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-        <li><a href="badges.html">Components</a></li>
+        <li>{{#link-to 'about'}}About Us{{/link-to}}</li>
       </ul>
     </div>
   </nav>
 </div>
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="section teal lighten-4">
+  <h3 class="center-align">Rate Your Representative</h3>
+  <h3 class="center-align"><small>Or Senator</small></h3>
+</div>
 
 {{outlet}}
 

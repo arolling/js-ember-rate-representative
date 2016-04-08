@@ -1,1 +1,24 @@
-{{yield}}
+<h4>New User</h4>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        {{input placeholder="Username" id="usernameNew" type="text" class="validate" value=usernameNew}}
+        <label for="usernameNew">User Name</label>
+      </div>
+      <div class="input-field col s6">
+        {{input id="zipcodeNew" type="number" class="validate" placeholder="90210" value=zipcodeNew length="5"}}
+        <label for="zipcodeNew">Zip Code</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        {{input id="addressNew" type="text" class="validate" placeholder="123 Main St, New York, NY" value=addressNew}}
+        <label for="addressNew">Address</label>
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action" {{action "signUpNew"}}>Sign Up
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+</div>
