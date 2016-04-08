@@ -1,1 +1,16 @@
-{{outlet}}
+<div class="row">
+  <div class="col s3">
+    {{current-user-tile logMeOut="logMeOut"}}
+  </div>
+  {{!-- put another column-6 here --}}
+  <div class="col s3 offset-s6">
+    <h5>Find Legislators</h5>
+    <form class="col s12">
+      <div class="input-field col s12">
+        {{input id="query" value=queryZipcode}}
+        <label for="query">Zip Code</label>
+      </div>
+      <a class="waves-effect waves-light btn" {{action "submitQuery"}}><i class="material-icons left">search</i>button</a>
+    </form>
+  </div>
+</div>

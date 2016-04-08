@@ -5,6 +5,7 @@ export default Ember.Component.extend({
 
   actions:{
     logMeOut(){
+      this.get('currentUser').logOut();
       this.sendAction("logMeOut");
     }
   }
