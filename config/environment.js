@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'rate-your-representative',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://rate-your-rep.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
