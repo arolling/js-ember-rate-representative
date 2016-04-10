@@ -1,2 +1,11 @@
-<h3>Page about {{model.remoteLegislator.first_name}} {{model.remoteLegislator.last_name}}</h3>
+<div class="row">
+  <div class="col s3">
+    {{current-user-tile logMeOut="logMeOut"}}
+  </div>
+  <div class="col s9">
+    <h3>{{model.remoteLegislator.first_name}} {{model.remoteLegislator.last_name}} ({{model.remoteLegislator.party}})</h3>
+    {{legislator-detail legislator=model.remoteLegislator}}
+  </div>
+</div>
 {{log model.remoteLegislator}}
+{{log model.localLegislator.bioguideId}}

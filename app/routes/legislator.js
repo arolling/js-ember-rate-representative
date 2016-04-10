@@ -5,7 +5,6 @@ export default Ember.Route.extend({
   model(params){
     var key = config.myApiKey;
     var url = "http://congress.api.sunlightfoundation.com/legislators?bioguide_id=" + params.bioguideId + "&apikey=" + key;
-    console.log(url);
     return Ember.RSVP.hash({
       localLegislator: this.store.query('legislator', {
         orderBy: 'bioguideId',
@@ -15,5 +14,11 @@ export default Ember.Route.extend({
         return responseJSON.results[0];
       })
     });
+  },
+
+  actions: {
+    logMeOut(){
+      this.transitionTo('index');
+    },
   }
 });

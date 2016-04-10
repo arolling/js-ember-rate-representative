@@ -17,8 +17,6 @@ export default Ember.Route.extend({
     },
 
     submitQuery(params){
-
-      console.log(params);
       this.transitionTo('search', params.zipcode);
     }
   }

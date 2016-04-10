@@ -6,8 +6,10 @@
           Please keep the conversation civil.
         </p>
       </div>
-      <div class="card-action">
-        <a class="waves-effect waves-teal btn-flat" {{action "logMeOut"}}>Log Out</a>
-        {{#link-to 'user' currentUser.user.id class="waves-effect waves-teal btn-flat"}}Profile{{/link-to}}
-      </div>
+      {{#if currentUser.user.id}}
+        <div class="card-action">
+          <a class="waves-effect waves-teal btn-flat" {{action "logMeOut"}}>Log Out</a>
+          {{#link-to 'user' currentUser.user.id class="waves-effect waves-teal btn-flat"}}Profile{{/link-to}}
+        </div>
+      {{/if}}
     </div>

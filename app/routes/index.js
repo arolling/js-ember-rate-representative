@@ -40,6 +40,10 @@ export default Ember.Route.extend({
 
     logMeOut(){
       this.transitionTo('index');
+    },
+
+    submitQuery(params){
+      this.transitionTo('search', params.zipcode);
     }
   }
 });
