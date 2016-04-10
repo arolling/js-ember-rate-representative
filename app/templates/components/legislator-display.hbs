@@ -1,5 +1,9 @@
 <ul class="collection">
   {{#each legislators as |lawmaker|}}
-    <li class="collection-item">{{lawmaker.first_name}} {{lawmaker.last_name}}</li>
+    <li class="collection-item">
+      <div>{{lawmaker.first_name}} {{lawmaker.last_name}}
+        <a class="btn-floating secondary-content waves-effect waves-light teal" {{action 'addLegislator' lawmaker}}><i class="material-icons">add</i></a>
+      </div>
+    </li>
   {{/each}}
 </ul>

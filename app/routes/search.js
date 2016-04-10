@@ -15,6 +15,13 @@ export default Ember.Route.extend({
     logMeOut(){
       this.transitionTo('index');
     },
+
+    addLegislator(params){
+      var newLegislator = this.store.createRecord('legislator', params);
+      newLegislator.save();
+      console.log(newLegislator);
+      this.transitionTo('legislator', newLegislator.get("bioguideId"));
+    }
   }
 
 });
