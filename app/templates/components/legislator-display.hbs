@@ -1,9 +1,9 @@
 <ul class="collection">
-  {{#each legislators as |lawmaker|}}
+  {{#each sortedLegislators as |lawmaker|}}
     <li class="collection-item">
-      <div><a href={{lawmaker.website}} class="teal-text">{{lawmaker.first_name}} {{lawmaker.last_name}}</a> - {{lawmaker.state}} ({{lawmaker.party}})
+      <div><a href={{lawmaker.website}} class="teal-text" target="_blank">{{lawmaker.first_name}} {{lawmaker.last_name}}</a> - {{lawmaker.state}} ({{lawmaker.party}})
         {{#if (alreadyAdded lawmaker.bioguide_id entries)}}
-          {{#link-to 'legislator' lawmaker.bioguide_id class="btn-floating secondary-content waves-effect waves-light teal"}}<i class="material-icons">comment</i>{{/link-to}}
+          {{#link-to 'legislator' lawmaker.bioguide_id class="btn-floating secondary-content waves-effect waves-light deep-purple"}}<i class="material-icons">comment</i>{{/link-to}}
         {{else}}
           <a class="btn-floating secondary-content waves-effect waves-light teal" {{action "addLegislator" lawmaker}}><i class="material-icons">add</i></a>
         {{/if}}

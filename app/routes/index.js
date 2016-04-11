@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 
   model(){
     var key = config.myApiKey;
-    var url = "http://congress.api.sunlightfoundation.com/legislators?per_page=30&apikey=" + key;
+    var url = "http://congress.api.sunlightfoundation.com/legislators?per_page=all&apikey=" + key;
     return Ember.RSVP.hash({
       currentUser: this.get('currentUser'),
       allUsers: this.store.findAll('user'),
