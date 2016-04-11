@@ -3,7 +3,7 @@
     <li class="collection-item">
       <span class="title">{{review.user.username}} posted {{moment-from-now review.posted}}</span>
       <a href="#!" class="secondary-content">{{rating-stars review.rating}}</a>
-      <p>{{review.details}}</p>
+      <p>{{body-format review.details}}</p>
     </li>
   {{/each}}
 </ul>

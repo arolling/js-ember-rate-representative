@@ -13,5 +13,8 @@ html {
 
 .collection .collection-item {
   line-height: 1.85rem;
-  font-size: 120%;
+  font-size: 170%;
+  .title {
+    font-size: 80%;
+  }
 }

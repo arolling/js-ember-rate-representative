@@ -7,6 +7,7 @@
     {{legislator-detail legislator=model.remoteLegislator}}
 
     {{#each model.localLegislator as |legislator|}}
+      <h5>Reviews:</h5>
       {{review-display legislator=legislator}}
       <div class="divider"></div>
       {{review-add legislator=legislator addReview="addReview"}}
