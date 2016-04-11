@@ -2,9 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    submitQuery() {
+    submitZipQuery() {
       var params = {
-        zipcode: this.get('queryZipcode')
+        query: "/locate?zip=" + this.get('queryZipcode')
+      };
+      this.sendAction('newQuery', params);
+    },
+    submitStringQuery() {
+      var params = {
+        query: "?query=" + this.get('queryString')
       };
       this.sendAction('newQuery', params);
     }

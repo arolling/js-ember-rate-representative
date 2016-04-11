@@ -17,7 +17,7 @@ export default Ember.Route.extend({
     },
 
     submitQuery(params){
-      this.transitionTo('search', params.zipcode);
+      this.transitionTo('search', params.query);
     }
   }
 });

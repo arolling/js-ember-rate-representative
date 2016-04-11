@@ -4,5 +4,13 @@
     {{input id="query" value=queryZipcode type="number"}}
     <label for="query">Zip Code</label>
   </div>
-  <a class="waves-effect waves-light btn" {{action "submitQuery"}}><i class="material-icons left">search</i>Find Legislators</a>
+  <a class="waves-effect waves-light btn" {{action "submitZipQuery"}}><i class="material-icons left">search</i>Find Legislators</a>
+</form>
+
+<form class="col s12">
+  <div class="input-field col s12">
+    {{input id="queryString" value=queryString type="text"}}
+    <label for="queryString">Name</label>
+  </div>
+  <a class="waves-effect waves-light btn" {{action "submitStringQuery"}}><i class="material-icons left">search</i>Find Legislators</a>
 </form>

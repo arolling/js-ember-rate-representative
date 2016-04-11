@@ -21,7 +21,7 @@ export default Ember.Route.extend({
       var newUser = this.store.createRecord('user', params);
       newUser.save();
       this.currentModel.currentUser.logIn(newUser);
-      this.transitionTo('index');
+      this.transitionTo('user', newUser.get('id'));
     },
 
     newLogIn(params){
@@ -36,7 +36,7 @@ export default Ember.Route.extend({
       if(!foundUser){
         alert("Not a valid combination. Please try again.");
       } else {
-        this.transitionTo('index'); //REPLACE WITH MOVE TO USER'S HOMEPAGE???
+        this.transitionTo('user', model.currentUser.user.get('id'));
       }
     },
 
@@ -45,7 +45,7 @@ export default Ember.Route.extend({
     },
 
     submitQuery(params){
-      this.transitionTo('search', params.zipcode);
+      this.transitionTo('search', params.query);
     },
 
     addLegislator(params){

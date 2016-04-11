@@ -1,7 +1,7 @@
 <ul class="collection">
   {{#each legislator.reviews as |review|}}
     <li class="collection-item">
-      <span class="title">{{review.user.username}} posted {{moment-from-now review.posted}}</span>
+      <span class="title">{{#link-to 'user' review.user.id class="teal-text"}}{{review.user.username}}{{/link-to}} posted {{moment-from-now review.posted}}</span>
       <a href="#!" class="secondary-content">{{rating-stars review.rating}}</a>
       <p>{{body-format review.details}}</p>
     </li>
