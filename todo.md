@@ -2,4 +2,4 @@
 * use googlemaps to show district boundaries?
 * threaded comments
 * User home page with links to their local reps
-* search field by name
+* search field by name - done

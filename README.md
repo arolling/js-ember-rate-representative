@@ -1,7 +1,6 @@
-# Rate-your-representative
+# Rate Your Representative
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This Ember application uses the Sunlight Congress API and Firebase to create a review website for federal lawmakers.
 
 ## Prerequisites
 
@@ -25,23 +24,10 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
 ### Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
@@ -51,3 +37,25 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Known Bugs
+
+Google Maps installed but not currently used, which throws errors with the Google Maps API.
+
+## Support and contact details
+
+[E-mail me](mailto:arolling@gmail.com) with any comments or concerns.
+
+## Technologies Used
+
+* JavaScript
+* Ember
+* npm
+* Bower
+* Ember-cli
+* Handlebars
+
+### License
+
+Licensed under the GPL.
+
+Copyright (c) 2016 **_Abigail Rolling_**
