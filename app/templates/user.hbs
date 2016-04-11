@@ -2,8 +2,20 @@
   <div class="col s3">
     {{current-user-tile logMeOut="logMeOut"}}
   </div>
-  {{!-- put another column-6 here --}}
-  <div class="col s3 offset-s6">
+  <div class="col s6">
+    <h3>{{model.profile.username}}'s Reviews</h3>
+    <ul class="collection">
+      {{#each model.profile.reviews as |review|}}
+        {{#link-to 'legislator' review.legislator.bioguideId class="collection-item"}}
+          <span class="title">{{review.user.username}} posted {{moment-from-now review.posted}}</span>
+          <a href="#!" class="secondary-content">{{rating-stars review.rating}}</a>
+          <p>{{review.details}}</p>
+        {{/link-to}}
+      {{/each}}
+    </ul>
+
+  </div>
+  <div class="col s3">
     {{search-form newQuery="submitQuery"}}
   </div>
 </div>

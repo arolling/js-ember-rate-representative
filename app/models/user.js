@@ -8,4 +8,3 @@ export default DS.Model.extend({
 
 
 });
-//<i class="material-icons">grade</i>
