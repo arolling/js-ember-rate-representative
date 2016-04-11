@@ -12,7 +12,8 @@ export default Ember.Route.extend({
       allUsers: this.store.findAll('user'),
       allLegislators: Ember.$.getJSON(url).then(function(responseJSON){
         return responseJSON.results;
-      })
+      }),
+      localLegislators: this.store.findAll('legislator')
     });
   },
   actions: {
@@ -44,6 +45,22 @@ export default Ember.Route.extend({
 
     submitQuery(params){
       this.transitionTo('search', params.zipcode);
+    },
+
+    addLegislator(params){
+      var model = this.currentModel;
+      var foundRecord = false;
+      model.localLegislators.forEach(function(lawmaker){
+        if(lawmaker.get('bioguideId') === params.bioguideId){
+          foundRecord = true;
+        }
+      });
+      if (foundRecord === false){
+        var newLegislator = this.store.createRecord('legislator', params);
+        newLegislator.save();
+        console.log(newLegislator);
+      }
+      this.transitionTo('legislator', params.bioguideId);
     }
   }
 });

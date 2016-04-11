@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col s7">
         <h4>View a Legislator</h4>
-        {{legislator-display legislators=model.allLegislators}}
+        {{legislator-display legislators=model.allLegislators entries=model.localLegislators addLegislator="addLegislator"}}
       </div>
       <div class="col s5">
         {{current-user-tile logMeOut="logMeOut"}}

@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       remoteLegislators: Ember.$.getJSON(url).then(function(responseJSON){
         return responseJSON.results;
       }),
-      databaseLegislators: this.store.findAll('legislator')
+      localLegislators: this.store.findAll('legislator')
     });
   },
 
@@ -21,7 +21,7 @@ export default Ember.Route.extend({
     addLegislator(params){
       var model = this.currentModel;
       var foundRecord = false;
-      model.databaseLegislators.forEach(function(lawmaker){
+      model.localLegislators.forEach(function(lawmaker){
         if(lawmaker.get('bioguideId') === params.bioguideId){
           foundRecord = true;
         }

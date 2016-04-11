@@ -13,7 +13,11 @@ export default Ember.Component.extend({
       possessive = 'His';
     }
     if(this.get('legislator.chamber') === 'house'){
-      return this.get('legislator.state_name') + "'s district " + this.get('legislator.district') + " in the House of Representatives. " + possessive + " current term ends " + moment(this.get('legislator.term_end')).format('LL') + ". " + possessive + " official phone number is " + this.get('legislator.phone');
+      return "represents " + this.get('legislator.state_name') + "'s district " + this.get('legislator.district') + " in the House of Representatives. " + possessive + " current term ends " + moment(this.get('legislator.term_end')).format('LL') + ". " + possessive + " official phone number is " + this.get('legislator.phone');
+    } else {
+      return "is the " + this.get('legislator.state_rank') + " Senator from the state of " + this.get('legislator.state_name') + ". " + possessive + " current term ends " + moment(this.get('legislator.term_end')).format('LL') + ". " + possessive + " official phone number is " + this.get('legislator.phone');
     }
-  })
+  }),
+
+  
 });

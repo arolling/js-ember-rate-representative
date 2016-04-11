@@ -5,7 +5,10 @@
   <div class="col s9">
     <h3>{{model.remoteLegislator.first_name}} {{model.remoteLegislator.last_name}} ({{model.remoteLegislator.party}})</h3>
     {{legislator-detail legislator=model.remoteLegislator}}
+
+    {{#each model.localLegislator as |legislator|}}
+      {{review-display legislator=legislator}}
+    {{/each}}
   </div>
 </div>
 {{log model.remoteLegislator}}
-{{log model.localLegislator.bioguideId}}
