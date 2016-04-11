@@ -1,0 +1,33 @@
+<h2>Add New Review</h2>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="col s2">
+        <h6>Rating</h6>
+        {{#md-radios
+          selection=radioSelection
+          optionValuePath='id'
+          optionLabelPath='text'}}
+          <p>{{md-radio value=1 name="One"}}</p>
+          <p>{{md-radio value=2 name="Two"}}</p>
+          <p>{{md-radio value=3 name="Three"}}</p>
+          <p>{{md-radio value=4 name="Four"}}</p>
+          <p>{{md-radio value=5 name="Five"}}</p>
+        {{/md-radios}}
+      </div>
+      <div class="col s10">
+        <div class="row">
+          <div class="input-field col s12">
+            {{textarea class="materialize-textarea" id="details" value=details}}
+            <label for="details">Detailed Review</label>
+          </div>
+          <button class="btn waves-effect waves-light" name="action" {{action "submitReview"}}>Submit Review
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
+{{log radioSelection}}

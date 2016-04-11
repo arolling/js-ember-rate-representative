@@ -8,6 +8,8 @@
 
     {{#each model.localLegislator as |legislator|}}
       {{review-display legislator=legislator}}
+      <div class="divider"></div>
+      {{review-add legislator=legislator}}
     {{/each}}
   </div>
 </div>
