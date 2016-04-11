@@ -5,6 +5,7 @@ export default DS.Model.extend({
   address: DS.attr(),
   zipcode: DS.attr(),
   reviews: DS.hasMany('review', {async:true}),
-  
+
 
 });
+//<i class="material-icons">grade</i>

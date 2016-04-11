@@ -1,5 +1,9 @@
 <ul class="collection">
   {{#each legislator.reviews as |review|}}
-    <li class="collection-item">{{review.details}}</li>
+    <li class="collection-item">
+      <span class="title">{{review.user.username}} posted {{moment-from-now review.posted}}</span>
+      <a href="#!" class="secondary-content">{{rating-stars review.rating}}</a>
+      <p>{{review.details}}</p>
+    </li>
   {{/each}}
 </ul>
