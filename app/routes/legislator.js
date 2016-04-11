@@ -20,5 +20,21 @@ export default Ember.Route.extend({
     logMeOut(){
       this.transitionTo('index');
     },
+
+    addReview(params){
+      var newReview = this.store.createRecord('review', params);
+      var user = params.user;
+      var legislator = params.legislator;
+      console.log(user);
+      console.log(legislator);
+      user.get('reviews').addObject(newReview);
+      legislator.get('reviews').addObject(newReview);
+      newReview.save().then(function(){
+        user.save();
+        return legislator.save();
+      });
+      this.transitionTo('legislator', legislator.get('bioguideId'));
+
+    }
   }
 });

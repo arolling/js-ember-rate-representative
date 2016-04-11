@@ -6,7 +6,6 @@ export function alreadyAdded(params) {
   var found = false;
   entries.forEach(function(entry){
     if(entry.get('bioguideId') === thisID){
-      console.log('matched');
       found = true;
     }
   });

@@ -8,11 +8,11 @@
           selection=radioSelection
           optionValuePath='id'
           optionLabelPath='text'}}
-          <p>{{md-radio value=1 name="One"}}</p>
-          <p>{{md-radio value=2 name="Two"}}</p>
-          <p>{{md-radio value=3 name="Three"}}</p>
-          <p>{{md-radio value=4 name="Four"}}</p>
-          <p>{{md-radio value=5 name="Five"}}</p>
+          <p>{{md-radio value=1 name="Very Poor"}}</p>
+          <p>{{md-radio value=2 name="Poor"}}</p>
+          <p>{{md-radio value=3 name="Average"}}</p>
+          <p>{{md-radio value=4 name="Good"}}</p>
+          <p>{{md-radio value=5 name="Very Good"}}</p>
         {{/md-radios}}
       </div>
       <div class="col s10">
@@ -21,9 +21,15 @@
             {{textarea class="materialize-textarea" id="details" value=details}}
             <label for="details">Detailed Review</label>
           </div>
-          <button class="btn waves-effect waves-light" name="action" {{action "submitReview"}}>Submit Review
-            <i class="material-icons right">send</i>
-          </button>
+          {{#if currentUser.user.id}}
+            <button class="btn waves-effect waves-light" name="action" {{action "submitReview"}}>Submit Review
+              <i class="material-icons right">thumbs_up_down</i>
+            </button>
+          {{else}}
+          <a href="/" class="btn waves-effect waves-light" >Sign in to Submit Review
+            <i class="material-icons right">warning</i>
+          </a>
+          {{/if}}
         </div>
       </div>
     </div>
